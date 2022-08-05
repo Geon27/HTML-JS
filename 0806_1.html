@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><title>셀렉터 만들기</title>
+<style>
+h3, li{
+	color: brown;
+}
+div > div > strong {
+	background: yellow;
+}
+ul strong {
+	color: dodgerblue;
+}
+.warning {
+	color: red;
+}
+body.main {
+	background: mistyrose;
+}
+#list {
+	background: aliceblue;
+}
+#list span {
+	color: forestgreen;
+}
+h3:first-letter {
+	color: red;
+}
+li:hover {
+	background: yellowgreen;
+}
+</style></head>
+<body class="main">
+<h3>웹 프로그래밍</h3>
+<hr>
+<div>
+	<div>2학기 <strong>학습 내용</strong></div>
+	<ul id="list">
+		<li>HTML5</li>
+		<li><strong>CSS</strong></li>
+		<li>JS</li>
+	</ul>
+	<div class="warning">a+을 목표로!</div>
+</div>
+</body>
+</html>
