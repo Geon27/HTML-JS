@@ -4,10 +4,34 @@
 <meta charset="utf-8">
 <title>프로토 타입으로 객체 만들기</title>
 <script>
-	
-</script>
-</head>
-<body>
+fuction Account(owner, code, balance) {
+	this.owner = owner;
+	this.code = code;
+	this.balance = balance;
 
+	this.inquiry = fuction() { return this.balance; }
+	this.deposit = fuction (money) { this.balance += balance; }
+	this.withdraw = function(money) {
+		this.balance -= money;
+		return money;
+	}
+}	
+</script></head>
+<body>
+<h3>Account 프로토 타입 만들기</h3>
+<hr>
+<script>
+	let account = new Account("홍길동", "111", 35000);
+
+	document.write("account : ");
+	document.write(account.owner + ", ");
+	document.write(account.code + ", ");
+	document.write(account.balance + "<br>");
+
+	account.deposit(10000);
+	document.write("10000원 저금 후 잔액은 " + account.inquiry() + "<br>");
+	account.deposit(5000);
+	document.write("5000원 인출 후 잔액은 " + account.inquiry() + "<br>");
+</script>
 </body>
 </html>
