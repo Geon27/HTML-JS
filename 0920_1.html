@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>new Image()로 이미지 로딩</title>
+<script>
+let files = ["/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Penguins.png",
+			 "/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Lighthouse.png",
+			 "/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Chrysanthemum.png",
+			 "/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Desert.png",
+			 "/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Hydrangeas.png",
+			 "/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Jellyfish.png",
+			 "/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Koala.png",
+			 "/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Tulips.png"];
+let imgs = new Array();
+for(let i=0; i<files.length; i++) {
+	imgs[i] = new Image();
+	imgs[i].src = files[i];
+}
+
+let next = 1;
+function change(img) {
+	img.src = imgs[next].src;
+	next++;
+	next %= imgs.length;
+}
+</script>
+</head>
+<body>
+<h3>new Image()로 이미지 로딩</h3>
+<hr>
+이미지를 클릭하면 다음 이미지를 보여줍니다.<p>
+<img style="border:20px ridge wheat"
+     src="/Users/geonyuk/Library/Mobile Documents/com~apple~CloudDocs/HTML Study/Penguins.png" alt="."
+     width="200" height="200"
+     onclick="change(this)">
+</body></html>
